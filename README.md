@@ -11,9 +11,6 @@ All data are downloaded from the [Paleobiology Database](https://paleobiodb.org/
 ### Languages used
 I will be putting this together in R. I intend to use the [PaleobioDB](https://github.com/ropensci/paleobioDB) package to download the data, run the analysis with my own code, and plot the results with [ggplot](https://ggplot2.tidyverse.org/).
 
-### Implementation
-
 
 ### Expected Products
-
-### Questions for instructor
+I will produce an R script that can download, analyze, and plot the results for any clade specified by the user.
