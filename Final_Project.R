@@ -34,19 +34,26 @@ count_new_sub = function(publication_data){
   return(output)
 }
 
-count_new = function(data, family = NULL, include_non_fam = TRUE){
+count_new = function(data, taxon = NULL, resolution = "family", include_non_member = TRUE){
+  # Check that taxonomic resolution is valid
+  resolution = tolower(resolution)
+  levels = c("phylum", "class", "family", "genus", "species_name", "primary_name", "accepted_name")
+  if(!(resolution %in% levels)){
+    stop(paste("Taxonomic resolution must be one of:", paste(levels, collapse = ", ")))
+  }
+  
   # Mark which entries are new species
   data$is_new_taxon = !duplicated(data$accepted_no)
 
   # Mark which entriew are new species of the desired family
-  if(!is.null(family)){
+  if(!is.null(taxon)){
     # If the include_non_fam is true, then retain entries from other families, marked as not new species
-    if(include_non_fam){
-      data$is_new_taxon = data$is_new_taxon & (data$family == family)
+    if(include_non_member){
+      data$is_new_taxon = data$is_new_taxon & (data[resolution] == taxon)
     }
     # Otherwise, completely remove entries from other families
     else{
-      data = data[data$family == family,]
+      data = data[data[resolution] == taxon,]
     }
   }
   # Reduce the dataset to entries that are either the first instance of a species or the first instance of a publication
