@@ -1,0 +1,1 @@
+wget -O "$pbdb_data.csv" "http://www.paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=$1&taxon_reso=species&idspcmod=!ng,af,cf,sl,if,eg,qm,qu&max_ma=250&min_ma=0&show=ident,class,refattr,acconly"
