@@ -1,5 +1,25 @@
 # Analyzing Publication History of Taxonomic Groups in the Paleobiology Database
 
+This project analyzes how well-studied a group of fossil organisms is using data from the [Paleobiology Database](https://paleobiodb.org/). The goal is to quantify the research effort for a clade in the database to aid in detecting sampling bias. The idea here is to generate collector curves, as is done in ecological sampling, but with each sample being a paper describing taxa from the relevant group.
+
+## Getting Started
+
+To load everything up, run `All_Functions.R`.
+
+```r
+source(All_Functions.R)
+```
+
+## Quick Version
+
+If you want to run a quick analysis of one taxonomic group, you can do that with the `quickie` function. This will output a plot of the cumulative number of species described across the publications in the Paleobiology Database.
+
+The arguments to `quickie` should be the name of a taxonomic group, and the rank of that group (e.g. `"Homo", "genus"` or `"sapiens", "species"`):
+
+```r
+quickie("Veneridae", "family")
+```
+
 ## Downloading Data
 
 Data can be downloaded using the `load_data` function. Give the function a vector containing the list of taxa
