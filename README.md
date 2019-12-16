@@ -85,7 +85,7 @@ mytilidae = count_new(data = data, taxon = "Mytilidae", resolution = "family")
 Then, run `year_count` on the result:
 
 ```r
-mytilidae_yearly = year_count(publications)
+mytilidae_yearly = year_count(mytilidae)
 ```
 
 ## Plotting
