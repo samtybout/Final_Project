@@ -2,6 +2,7 @@
 
 This project analyzes how well-studied a group of fossil organisms is using data from the [Paleobiology Database](https://paleobiodb.org/). The goal is to quantify the research effort for a clade in the database to aid in detecting sampling bias. The idea here is to generate collector curves, as is done in ecological sampling, but with each sample being a paper describing taxa from the relevant group.
 
+
 ## Getting Started
 
 To load everything up, run `All_Functions.R`.
