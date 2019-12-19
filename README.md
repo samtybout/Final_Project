@@ -89,7 +89,8 @@ Then, run `year_count` on the result:
 mytilidae_yearly = year_count(mytilidae)
 ```
 
-## Plotting
+## Plotting 
+Insert images for each plot for a more awesome readme.md
 
 After you've generated these counts, you can visualize them with the plotting functions.
 
